@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!--
+ author: Elisha Patterson
+ ePassport App!!
+  version 1
+ QR CODE DOES NOT WORK YET
+ 
+ Yay!!
+-->
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="libs/jquery-2.1.4.js"></script>
+    <script src="cordova.js"></script>
+       
+	   <title>ePassport</title>
+    </head>
+    <body>
+        <div data-role="page" id="homepage">
+		<div data-role="header">
+			<h1>STaRS ePassport</h1>
+		</div>
+
+		<div data-role="main" class="ui-content">
+		<div align="center">
+			<img src="img/GG and WIT.jpg" style="height:400px" alt="picture of STaRS">
+			
+		<div id="greenBtn" class="white"><button id="qrCode" data-role="button" data-inline="true">Scan QR Code</button></div>
+		<a href="#report" data-role="button" data-inline="true">Report</a>
+		<a href="#instructor" data-role="button" data-inline="true">Send to Instructor</a>
+		<a href="#nfc" class="ui-disabled" data-role="button" data-inline="true">NFC</a>
+		<!-- <button id="about" class="ui-btn" data-role="button" data-inline="true">About</button> -->
+		<a href="#about" data-role="button" data-inline="true">About</a>
+
+
+		</div>
+		</div>
+	</div> 
+	<!-- Scan page -->
+	
+	
+	<div data-role="page" id="qrCode">
+		<div data-role="header">
+		<!-- QR code plugin -->
+		<h1><strong>Scan!</strong></h1></div>
+		<h2>If you're seeing this, it's not working yet.</h2>
+
+	</div>
+	
+	<!-- Report page -->
+	<div data-role="page" id="report">
+		<div align="center">
+		<div data-role="header">STaRS ePassport</div>
+		<h1>Scan logs</h1>
+		</div>
+    </div>			
+	
+	<!-- Send to Instructor page -->
+	<div data-role="page" id="instructor">
+		<div data-role="header">
+		<h1>STaRS ePassport</h1>
+		</div>
+		
+		
+		
+		<div data-role = "main" class="ui-content">
+        <div align="center">
+          <h1>Email Instructor</h1>
+        </div>
+            <div class="ui-field-contain">
+			<form name="myForm" method="post" action="demoform.asp">
+              <p>Email Report to:</p>
+			  <!-- <input for="name" id="toAddress" value="" type="email" placeholder="Professor's email..."> -->
+			  <input name="profEmail" type="text" id="toAddress" placeholder="Instructor's email..."
+              <p>Your Last Name</p>
+              <input type="text" id="lastName">
+              <p>Your First Name</p>
+              <input type="text" id="firstName">
+              <p>Your course<p>
+              <input type="text" id="course" placeholder= "i.e. MATH 3000">
+              <p>Your section</p>
+              <input type="text" id="section" placeholder= "i.e. 12">
+			
+		<div data-role="main" class="ui-content">
+			<!-- send button -->  
+		<a data-role="button" data-inline="true" id="sendBtn" href="#">Submit</a>
+		<a href="#homepage" data-role="button" data-inline="true" data-icon="delete">Cancel</a>
+		</div>
+		
+        
+          
+		</form>
+      </div>
+		
+		
+	</div>
+	</div>
+	
+	<!-- NFC page -->
+	<div data-role="page" id="nfc">
+		<div data-role="header">
+		<h1><strong>NFC feature</strong></h1></div>
+		<h2><strong>Coming Soon!<h2><strong>
+	
+	</div>
+    <!-- About page [not showing! :(] -->
+	<div data-role="page" id="about">
+		<div data-role="header">
+		<h1><strong>About the developer</strong></h1>
+	    </div>
+		<img src="img/GG and WIT.jpg" style="height:400px" alt="picture of STaRS">
+		<p>I am a senior at GGC due to graduate in May!</p>
+		
+		<div data-role="main" class="ui-content">
+        <p>Welcome!</p>
+		<a href="#about" class="ui-btn">About the author</a>
+        </div>
+	 
+	</div>
+	
+
+	
+	
+        
+		<!-- The End -->
+	<script src="js/index.js"></script>	
+    </body>
+</html>
